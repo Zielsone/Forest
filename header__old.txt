@@ -1,0 +1,40 @@
+.header {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 2em;
+  height: 60vh;
+  text-align: justify;
+  text-justify: inter-word;
+  color: $main-color;
+  overflow: hidden;
+  @include heroImages("/dist/img/jungle-1807476_1280.jpg");
+  background-size: 117% 140%;
+  background-position: 70% 116%;
+  z-index: -10;
+
+  &::before {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    content: "";
+  }
+
+  &__heading {
+    width: 100%;
+    font-weight: 400;
+    font-size: 2rem;
+    z-index: 10;
+    margin-bottom: 1em;
+
+  }
+
+  &__text {
+    width: 100%;
+    font-size: 2.5rem;
+    z-index: 10;
+  }
+}

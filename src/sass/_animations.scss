@@ -1,0 +1,9 @@
+@keyframes navItemsAnimation {
+    from {
+        transform: translateX(-250%);
+    }
+
+    to {
+        transform: translateX(0);
+    }
+}
