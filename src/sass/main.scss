@@ -116,7 +116,8 @@ body {
 }
 
 //---------------------MAIN------------------------
-//---------------------DREAMS SECTION------------------------
+
+//---------------------ABOUT SECTION------------------------
 .about {
   &__box {
     display: flex;
@@ -127,15 +128,53 @@ body {
   &__img {
     width: 100%;
     margin-bottom: 1em;
+    transform: translateX(5%);
+    -webkit-box-shadow: 0px 0px 42px -7px rgba(32, 78, 35, 1);
+    -moz-box-shadow: 0px 0px 42px -7px rgba(32, 78, 35, 1);
+    box-shadow: 0px 0px 42px -7px rgba(32, 78, 35, 1);
   }
 
   &__title {
     margin-bottom: 0.5em;
+    text-align: center;
+    padding: 1.5em;
   }
 
   &__text {
+    padding: 1em;
     font-size: 1.4rem;
+    text-align: justify;
+    line-height: 1.5em;
   }
+}
+
+//---------------------BANNER SECTION------------------------
+
+.banner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 20vh;
+  @include heroImages("/dist/img/girl-5785590_1280.jpg");
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 20vh;
+    background-color: rgba(0, 0, 0, 0.4);
+  }
+}
+
+.banner__heading {
+  position: relative;
+  text-align: center;
+  color: $main-color;
+  border: 3px solid $main-color;
+  padding: 0.5em;
+  font-size: 2rem;
 }
 
 //---------------------FOOTER------------------------
@@ -144,3 +183,5 @@ body {
   height: 100vh;
   margin-bottom: 1em;
 }
+
+//---------------------MEDIA QUERRIES------------------------
