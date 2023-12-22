@@ -142,6 +142,7 @@ body {
 
   &__text {
     padding: 1em;
+    margin-left: 2em;
     font-size: 1.4rem;
     text-align: justify;
     line-height: 1.5em;
@@ -175,6 +176,22 @@ body {
   border: 3px solid $main-color;
   padding: 0.5em;
   font-size: 2rem;
+}
+
+//--------------------- OFFERS ------------------------
+.offers {
+  &__text {
+    text-align: center;
+    font-size: 1.8rem;
+  }
+  &__card {
+    position: relative;
+    margin: 1em 0;
+    height: 450px;
+    color: $sec-color;
+    text-align: center;
+    padding: 2em;
+  }
 }
 
 //---------------------FOOTER------------------------
