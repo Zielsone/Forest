@@ -183,14 +183,58 @@ body {
   &__text {
     text-align: center;
     font-size: 1.8rem;
+    padding-bottom: 2em;
+  }
+  &__cards {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
   &__card {
     position: relative;
     margin: 1em 0;
     height: 450px;
+    width: 300px;
     color: $sec-color;
     text-align: center;
     padding: 2em;
+    border: 1px solid black;
+
+    &-options {
+      list-style-type: none;
+      line-height: 1.7em;
+      font-size: 1.6rem;
+      text-transform: lowercase;
+    }
+
+    .off {
+      color: #6c757d;
+    }
+
+    .fa-check {
+      color: yellowgreen;
+      margin-right: 0.5em;
+    }
+
+    .fa-minus {
+      color: #6c757d;
+      margin-right: 0.5em;
+    }
+
+    &-title {
+      font-size: 3rem;
+      font-weight: 400;
+    }
+
+    &-price {
+      font-size: 4rem;
+      padding: 0.2em;
+    }
+
+    &-button {
+      @include cardBtn;
+    }
   }
 }
 

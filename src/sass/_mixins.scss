@@ -4,3 +4,15 @@
   background-repeat: no-repeat;
   background-position: center;
 }
+
+@mixin cardBtn {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  bottom: 2em;
+  padding: 1em;
+  border-radius: 8px;
+  width: 80%;
+  border: none;
+  cursor: pointer;
+}
