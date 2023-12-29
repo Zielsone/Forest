@@ -8,9 +8,14 @@
   </head>
 
   <body>
-    <!-- @include 'nav.kit' -->
+    <nav class="navbar-mobile" id="navbar-mobile">
+      <h2 class="navbar-mobile-logo">
+        <i class="fa-solid fa-tree"></i> Forest
+      </h2>
+      <!-- @include 'nav.kit' -->
+    </nav>
 
-    <header class="header section">
+    <header class="header section" id="home">
       <h1 class="header__heading">Forest Group</h1>
       <h2 class="header__text">Najpiękniejszy park w Twojej okolicy!</h2>
     </header>
@@ -99,7 +104,9 @@
                   <i class="fa-solid fa-minus"></i>Opcja poza pakietem
                 </li>
               </ul>
-              <button class="offers__card-button" aria-label="choose">
+              <button
+                class="offers__card-button btn-active"
+                aria-label="choose">
                 Wybierz
               </button>
             </div>
@@ -129,6 +136,12 @@
               </button>
             </div>
           </div>
+          <p class="offers__text">Podobają Ci się nasze oferty ?</p>
+          <p class="offers__textmore">
+            Zobacz
+            <a href="#" class="offers__textmore-link">więcej ofert</a> aby
+            przekonać się co jeszcze mamy do zaoferowania !
+          </p>
         </div>
       </section>
     </main>
