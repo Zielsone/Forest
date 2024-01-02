@@ -1,6 +1,7 @@
 const nav = document.querySelector(".nav");
 const navBtn = document.querySelector(".burger-btn");
 const allNavItems = document.querySelectorAll(".nav__item");
+const footerYear = document.querySelector(".footer__year");
 
 const handleNav = () => {
   nav.classList.toggle("nav--active");
@@ -30,4 +31,10 @@ const handleNavItemsAnimation = () => {
   });
 };
 
+const handleCurrentYear = () => {
+  const year = new Date().getFullYear();
+  footerYear.innerHTML = year;
+};
+
+handleCurrentYear();
 navBtn.addEventListener("click", handleNav);

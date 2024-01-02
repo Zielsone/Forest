@@ -48,7 +48,8 @@ body {
     display: block;
     margin: 0.5em 1em;
     padding: 0.5em 1em;
-    font-size: 2.8rem;
+    font-size: 3rem;
+    font-weight: 200;
     color: $main-color;
     text-decoration: none;
 
@@ -160,11 +161,12 @@ body {
     margin-bottom: 0.5em;
     text-align: center;
     padding: 1.5em;
+    font-size: 2.2rem;
   }
 
   &__text {
     padding: 1em;
-    font-size: 1.4rem;
+    font-size: 1.6rem;
     text-align: justify;
     line-height: 1.5em;
   }
@@ -287,6 +289,17 @@ body {
       -webkit-box-shadow: 3px 4px 16px -5px rgba(66, 68, 90, 1);
       -moz-box-shadow: 3px 4px 16px -5px rgba(66, 68, 90, 1);
       box-shadow: 3px 4px 16px -5px rgba(66, 68, 90, 1);
+      transition: 0.5s;
+
+      &:hover {
+        color: $main-color;
+        background-color: yellowgreen;
+        -webkit-box-shadow: 0px 5px 25px -2px yellowgreen;
+        -moz-box-shadow: 0px 5px 25px -2px yellowgreen;
+        box-shadow: 0px 5px 25px -2px yellowgreen;
+
+        animation: pulse 2s infinite;
+      }
     }
 
     .btn-active {
