@@ -138,8 +138,6 @@ body {
   }
 }
 
-//---------------------MAIN------------------------
-
 //---------------------ABOUT SECTION------------------------
 .about {
   &__box {
@@ -293,12 +291,7 @@ body {
 
       &:hover {
         color: $main-color;
-        background-color: yellowgreen;
-        -webkit-box-shadow: 0px 5px 25px -2px yellowgreen;
-        -moz-box-shadow: 0px 5px 25px -2px yellowgreen;
-        box-shadow: 0px 5px 25px -2px yellowgreen;
-
-        animation: pulse 2s infinite;
+        @include activeBtn;
       }
     }
 
@@ -311,6 +304,45 @@ body {
   }
 }
 
+//--------------------- CONTACT ------------------------
+.contact {
+  position: relative;
+  &__form,
+  &__form-top {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__form-label {
+    margin-bottom: 0.5em;
+    text-transform: uppercase;
+  }
+
+  &__form-input {
+    @include contactForm;
+  }
+  &__form-textarea {
+    @include contactForm;
+
+    max-width: 100%;
+    width: 100%;
+    min-height: 150px;
+    margin-bottom: 3em;
+  }
+
+  &__form-btn {
+    width: 100%;
+    max-width: 300px;
+    @include cardBtn;
+    letter-spacing: 1px;
+    transition: 0.5s;
+
+    &:hover {
+      color: $main-color;
+      @include activeBtn;
+    }
+  }
+}
 //---------------------FOOTER------------------------
 
 .footer {
