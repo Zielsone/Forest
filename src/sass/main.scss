@@ -360,12 +360,11 @@ body {
 .maps {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
   text-align: center;
   &-heading {
     font-size: 2.2rem;
-    padding: 2em;
-  }
-  &-map {
     padding: 2em;
   }
 }
@@ -421,3 +420,42 @@ body {
 }
 
 //---------------------MEDIA QUERRIES------------------------
+
+// X-Small
+@media (max-width: 374px) {
+  nav {
+    .navbar-mobile {
+      &-logo {
+        font-size: 2.5rem;
+      }
+    }
+  }
+
+  .offers {
+    &__text {
+      font-size: 2.1rem;
+    }
+  }
+
+  .maps {
+    &-map_sm {
+      display: none;
+    }
+  }
+}
+
+@media (min-width: 375px) and (max-width: 575.98px) {
+  .maps {
+    &-map_min {
+      display: none;
+    }
+  }
+}
+
+@media (min-width: 576px) and (max-width: 768px) {
+  .about {
+    &__img {
+      transform: translateX(0%);
+    }
+  }
+}
