@@ -102,6 +102,59 @@ body {
   }
 }
 
+.navbar-desktop {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 7vh;
+  background-color: $main-color;
+
+  &-logo {
+    position: absolute;
+
+    align-self: start;
+    font-size: 3rem;
+    font-weight: 200;
+    padding: 0.5em;
+    padding-left: 2em;
+    a {
+      color: black;
+      text-decoration: none;
+    }
+  }
+
+  .navdesktop {
+    align-self: flex-end;
+    height: 100%;
+    padding-right: 3em;
+    a {
+      color: black;
+      text-decoration: none;
+    }
+    &__items {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      &-item {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 1em;
+        transition: 0.5s;
+        &:hover {
+          background-color: $sec-color;
+          color: $main-color;
+        }
+      }
+    }
+  }
+}
+
 //---------------------HEADER------------------------
 
 .header {
@@ -423,6 +476,13 @@ body {
 
 // X-Small
 @media (max-width: 374px) {
+  .navdesktop {
+    display: none;
+  }
+
+  .navbar-desktop {
+    display: none;
+  }
   nav {
     .navbar-mobile {
       &-logo {
@@ -441,18 +501,36 @@ body {
     &-map_sm {
       display: none;
     }
+    &-map_md {
+      display: none;
+    }
   }
 }
 
 @media (min-width: 375px) and (max-width: 575.98px) {
+  .navdesktop {
+    display: none;
+  }
+  .navbar-desktop {
+    display: none;
+  }
   .maps {
     &-map_min {
+      display: none;
+    }
+    &-map_md {
       display: none;
     }
   }
 }
 
 @media (min-width: 576px) and (max-width: 768px) {
+  .navdesktop {
+    display: none;
+  }
+  .navbar-desktop {
+    display: none;
+  }
   .about {
     &__img {
       transform: translateX(0%);
@@ -463,6 +541,45 @@ body {
     &__heading {
       padding: 1em;
       font-size: 2.5rem;
+    }
+  }
+  .maps {
+    &-map_min {
+      display: none;
+    }
+    &-map_sm {
+      display: none;
+    }
+  }
+}
+
+@media (min-width: 769px) and (max-width: 992px) {
+  .navbar-mobile {
+    display: none;
+  }
+  .header {
+    height: 40vh;
+    @include heroImages("/dist/img/jungle-1807476_1280.jpg");
+    padding: 4em;
+  }
+  .about {
+    &__box {
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      &--text {
+        display: flex;
+      }
+    }
+    &__img {
+      transform: translateX(0%);
+      height: 100%;
+    }
+    &__title {
+      font-size: 1.5rem;
+    }
+    &__text {
+      font-size: 1.4rem;
     }
   }
 }

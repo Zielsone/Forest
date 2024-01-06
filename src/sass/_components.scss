@@ -60,7 +60,7 @@
 // REVERSE BTN
 .reverse-btn {
   position: fixed;
-  top: 15px;
+  top: 25px;
   right: 20px;
   padding: 1em;
   background: none;
@@ -129,12 +129,15 @@
   .burger-btn {
     top: 8px;
   }
-  .reverse-btn {
-    top: 8px;
-  }
 }
 
 @media (min-width: 576px) and (max-width: 768px) {
+  .section-padding {
+    padding: 3em 3em;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 992px) {
   .burger-btn {
     display: none;
   }
