@@ -245,15 +245,15 @@ body {
     height: 25vh;
     background-color: rgba(0, 0, 0, 0.4);
   }
-}
 
-.banner__heading {
-  position: relative;
-  text-align: center;
-  color: $main-color;
-  border: 3px solid $main-color;
-  padding: 0.5em;
-  font-size: 2rem;
+  &__heading {
+    position: relative;
+    text-align: center;
+    color: $main-color;
+    border: 1px solid $main-color;
+    padding: 0.5em;
+    font-size: 2rem;
+  }
 }
 
 //--------------------- OFFERS ------------------------
@@ -560,26 +560,65 @@ body {
   .header {
     height: 40vh;
     @include heroImages("/dist/img/jungle-1807476_1280.jpg");
-    padding: 4em;
+    padding: 3em;
   }
   .about {
     &__box {
       flex-direction: row;
       justify-content: center;
-      align-items: center;
+
       &--text {
         display: flex;
       }
+      &--img {
+        flex: 1;
+      }
+      &--text {
+        flex: 1;
+        flex-direction: column;
+        padding-left: 3em;
+      }
     }
+
     &__img {
       transform: translateX(0%);
       height: 100%;
+      margin-bottom: 0;
     }
     &__title {
-      font-size: 1.5rem;
+      font-size: 1.8rem;
+      text-align: left;
+      padding-bottom: 1em;
+      padding-left: 0;
+      padding-top: 0;
+      margin: 0;
     }
     &__text {
       font-size: 1.4rem;
+      text-align: left;
+      padding: 0;
+      margin: 0;
+    }
+  }
+  .banner {
+    height: 30vh;
+    padding: 8em;
+    background-size: 150%;
+
+    &::before {
+      height: 30vh;
+    }
+
+    &__heading {
+      padding: 1em;
+      font-size: 4rem;
+    }
+  }
+  .offers {
+    &__cards {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-evenly;
     }
   }
 }
