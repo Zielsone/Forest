@@ -144,4 +144,11 @@
   .section-padding {
     padding: 3em 3em;
   }
+  .reverse-btn {
+    position: absolute;
+    top: 25px;
+    right: 20px;
+    padding: 1em;
+    z-index: 1000;
+  }
 }

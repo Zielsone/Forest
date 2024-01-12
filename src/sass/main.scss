@@ -462,7 +462,7 @@ body {
     }
 
     &:hover {
-      color: rgb(63, 62, 62);
+      color: yellowgreen;
     }
   }
 
@@ -619,6 +619,51 @@ body {
       flex-direction: row;
       flex-wrap: wrap;
       justify-content: space-evenly;
+    }
+  }
+  .footer {
+    &__box-desktop {
+      display: block;
+      text-align: center;
+      .footer__box-title {
+        margin-bottom: 0.1em;
+        text-transform: none;
+        font-weight: bold;
+        font-size: 2rem;
+      }
+
+      .footer__box-list {
+        &:last-child {
+          padding-bottom: 2em;
+        }
+        list-style-type: none;
+        &-item {
+          padding: 0.2em;
+          a {
+            font-size: 1.4rem;
+            text-decoration: none;
+            color: black;
+            transition: 0.5s;
+            &:hover {
+              color: yellowgreen;
+            }
+          }
+        }
+      }
+    }
+    &__box-social {
+      text-align: center;
+    }
+  }
+  .maps {
+    &-map_min {
+      display: none;
+    }
+    &-map_sm {
+      display: none;
+    }
+    &-map_md {
+      display: none;
     }
   }
 }
