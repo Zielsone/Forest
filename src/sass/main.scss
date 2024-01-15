@@ -667,3 +667,142 @@ body {
     }
   }
 }
+
+@media (min-width: 993px) and (max-width: 1200px) {
+  .navbar-mobile {
+    display: none;
+  }
+  .navbar-desktop {
+    &-logo {
+      padding-left: 3em;
+    }
+  }
+  .header {
+    height: 40vh;
+    @include heroImages("/dist/img/jungle-1807476_1280.jpg");
+    padding: 6em;
+    background-size: 130%;
+    background-position: -160px -420px;
+    &__heading {
+      font-size: 2.6rem;
+      margin-bottom: 0;
+    }
+    &__text {
+      font-size: 4rem;
+    }
+  }
+  .about {
+    .wrapper {
+      padding: 5em;
+    }
+    &__box {
+      flex-direction: row;
+      justify-content: center;
+
+      &--text {
+        display: flex;
+      }
+      &--img {
+        flex: 1;
+      }
+      &--text {
+        flex: 1;
+        flex-direction: column;
+        padding-left: 3em;
+      }
+    }
+
+    &__img {
+      transform: translateX(0%);
+      height: 100%;
+      margin-bottom: 0;
+    }
+    &__title {
+      font-size: 2.2rem;
+      text-align: left;
+      padding-bottom: 1em;
+      padding-left: 0;
+      padding-top: 0;
+      margin: 0;
+    }
+    &__text {
+      font-size: 1.6rem;
+      text-align: left;
+      padding: 0;
+      margin: 0;
+      line-height: 200%;
+    }
+  }
+  .banner {
+    height: 30vh;
+    padding: 8em;
+    background-size: 120%;
+
+    &::before {
+      height: 30vh;
+    }
+
+    &__heading {
+      padding: 1em;
+      font-size: 4rem;
+    }
+  }
+  .offers {
+    &__cards {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-evenly;
+    }
+  }
+  .footer {
+    &__boxes {
+      display: flex;
+    }
+    &__box {
+      p {
+        display: none;
+      }
+      &-link {
+        display: none;
+      }
+    }
+
+    &__box-desktop {
+      display: flex;
+      flex-direction: column;
+      ul {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .footer__box-title {
+        margin-bottom: 0.1em;
+        text-transform: none;
+        font-weight: bold;
+        font-size: 2rem;
+      }
+
+      .footer__box-list {
+        &:last-child {
+          padding-bottom: 2em;
+        }
+        list-style-type: none;
+        &-item {
+          padding: 0.2em;
+          a {
+            font-size: 1.4rem;
+            text-decoration: none;
+            color: black;
+            transition: 0.5s;
+            &:hover {
+              color: yellowgreen;
+            }
+          }
+        }
+      }
+    }
+    &__box-social {
+      text-align: center;
+    }
+  }
+}

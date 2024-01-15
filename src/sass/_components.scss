@@ -152,3 +152,9 @@
     z-index: 1000;
   }
 }
+
+@media (min-width: 993px) and (max-width: 1200px) {
+  .burger-btn {
+    display: none;
+  }
+}
