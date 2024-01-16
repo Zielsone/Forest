@@ -439,7 +439,7 @@ body {
     display: none;
   }
 
-  &__box-title {
+  &__box_title {
     margin-bottom: 1em;
     font-size: 3rem;
     font-weight: 200;
@@ -757,19 +757,37 @@ body {
   .footer {
     &__boxes {
       display: flex;
+      flex-direction: row;
+      justify-content: space-around;
     }
     &__box {
+      display: flex;
+      align-items: center;
       p {
         display: none;
       }
       &-link {
         display: none;
       }
+      &_title {
+        .fa-solid {
+          margin-right: 0.2em;
+        }
+        display: flex;
+        padding: 2px;
+        align-items: center;
+        justify-content: center;
+      }
+      &-menu {
+        display: flex;
+      }
     }
 
     &__box-desktop {
       display: flex;
       flex-direction: column;
+      padding: 2em;
+      align-items: center;
       ul {
         display: flex;
         flex-direction: column;
@@ -803,6 +821,207 @@ body {
     }
     &__box-social {
       text-align: center;
+    }
+  }
+  .contact {
+    padding: 6em;
+  }
+  .maps {
+    &-map_min {
+      display: none;
+    }
+    &-map_sm {
+      display: none;
+    }
+    &-map_md {
+      display: none;
+    }
+    &-map_lg {
+      display: none;
+    }
+  }
+}
+
+@media (min-width: 1201px) {
+  .navbar-mobile {
+    display: none;
+  }
+  .navbar-desktop {
+    &-logo {
+      padding-left: 6em;
+    }
+  }
+  .navdesktop {
+    &__items {
+      padding-right: 12em;
+      font-size: 1.8rem;
+    }
+  }
+  .header {
+    height: 50vh;
+    @include heroImages("/dist/img/jungle-1807476_1280.jpg");
+    padding: 12em;
+    background-size: 100%;
+
+    &__heading {
+      font-size: 2.6rem;
+      margin-bottom: 0;
+    }
+    &__text {
+      font-size: 4rem;
+    }
+  }
+  .about {
+    .wrapper {
+      padding: 0.1em;
+    }
+    &__box {
+      flex-direction: row;
+      justify-content: center;
+
+      &--text {
+        display: flex;
+      }
+      &--img {
+        flex: 1;
+      }
+      &--text {
+        flex: 1;
+        flex-direction: column;
+        padding-left: 10em;
+      }
+    }
+
+    &__img {
+      transform: translateX(0%);
+      height: 100%;
+      margin-bottom: 0;
+    }
+    &__title {
+      font-size: 2.2rem;
+      text-align: left;
+      padding-bottom: 1em;
+      padding-left: 0;
+      padding-top: 0;
+      margin: 0;
+    }
+    &__text {
+      font-size: 1.6rem;
+      text-align: left;
+      padding: 0;
+      margin: 0;
+      line-height: 200%;
+    }
+  }
+  .banner {
+    height: 30vh;
+    padding: 8em;
+    background-size: 100%;
+
+    &::before {
+      height: 30vh;
+    }
+
+    &__heading {
+      padding: 1em;
+      font-size: 4rem;
+    }
+  }
+  .offers {
+    &__cards {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-evenly;
+    }
+  }
+  .offers {
+    &__cards {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-evenly;
+    }
+  }
+  .footer {
+    &__boxes {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+    }
+    &__box {
+      display: flex;
+      align-items: center;
+      p {
+        display: none;
+      }
+      &-link {
+        display: none;
+      }
+      &_title {
+        .fa-solid {
+          margin-right: 0.2em;
+        }
+        display: flex;
+        padding: 2px;
+        align-items: center;
+        justify-content: center;
+      }
+      &-menu {
+        display: flex;
+      }
+    }
+
+    &__box-desktop {
+      display: flex;
+      flex-direction: column;
+      padding: 2em;
+      align-items: center;
+      ul {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .footer__box-title {
+        margin-bottom: 0.1em;
+        text-transform: none;
+        font-weight: bold;
+        font-size: 2rem;
+      }
+
+      .footer__box-list {
+        &:last-child {
+          padding-bottom: 2em;
+        }
+        list-style-type: none;
+        &-item {
+          padding: 0.2em;
+          a {
+            font-size: 1.4rem;
+            text-decoration: none;
+            color: black;
+            transition: 0.5s;
+            &:hover {
+              color: yellowgreen;
+            }
+          }
+        }
+      }
+    }
+    &__box-social {
+      text-align: center;
+    }
+  }
+  .maps {
+    &-map_min {
+      display: none;
+    }
+    &-map_sm {
+      display: none;
+    }
+    &-map_md {
+      display: none;
+    }
+    &-map_lg {
+      display: none;
     }
   }
 }

@@ -157,4 +157,24 @@
   .burger-btn {
     display: none;
   }
+  .reverse-btn {
+    position: absolute;
+    top: 25px;
+    right: 20px;
+    padding: 1em;
+    z-index: 1000;
+  }
+}
+
+@media (min-width: 1201px) {
+  .burger-btn {
+    display: none;
+  }
+  .reverse-btn {
+    position: absolute;
+    top: 25px;
+    right: 20px;
+    padding: 1em;
+    z-index: 1000;
+  }
 }
